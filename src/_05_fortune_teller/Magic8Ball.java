@@ -32,5 +32,12 @@ public class Magic8Ball {
 	// 8. If the random number is 3
 
 	// -- write your own answer
+	public String getFortune() {
+		int ran = new Random().nextInt(4);
+		String[] arr = new String[] {"Yes","No","Maybe you should ask Google?","I've been trying to reach you about your car's extended warranty"};
+		
+		return arr[ran];
+	}
+	
 
 }
