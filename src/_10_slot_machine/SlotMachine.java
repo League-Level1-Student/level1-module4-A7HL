@@ -11,6 +11,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 
@@ -66,9 +67,9 @@ public class SlotMachine implements ActionListener {
 		spin();
 	}
 	public void spin() {
-		int num1;
-		int num2;
-		int num3;
+		int num1 =0;
+		int num2 =0;
+		int num3 =0;
 		pane.removeAll();
 	
 		
@@ -107,11 +108,12 @@ public class SlotMachine implements ActionListener {
 		//pane.add(slot1);
 		//pane.add(slot2);
 		//pane.add(slot3);
-		//if(num1==num2&&num2==num3) {
-			//ON THIS STEP
-		//}
+		
 		pane.add(spin);
 		frame.pack();
+		if(num1==num2&&num2==num3) {
+			JOptionPane.showMessageDialog(null, "You win!!!");
+		}
 	}
 	
 }
